@@ -4,6 +4,7 @@ import com.geop.AtualizacoesGerais.api.dtos.FluxoDePessoasRequest;
 import com.geop.AtualizacoesGerais.api.dtos.FluxoDePessoasResponse;
 import com.geop.AtualizacoesGerais.api.services.FluxoDePessoasService;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @RequestMapping(value = "/fluxodepessoas/v1")
 public class FluxoDePessoasController {
+
         private final FluxoDePessoasService fluxoDePessoasService;
 
         @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)

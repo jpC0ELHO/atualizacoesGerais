@@ -19,7 +19,7 @@ import static com.geop.AtualizacoesGerais.api.dtos.FluxoDePessoasRequest.toEntid
 @Service
 @Log4j2
 @AllArgsConstructor
-public class iFluxoDePessoasService implements FluxoDePessoasService{
+public class FluxoDePessoasServiceImpl implements FluxoDePessoasService{
     private final FluxoDePessoasRepository fluxoDePessoasRepository;
     private final SimpMessagingTemplate messagingTemplate;
     @Override
