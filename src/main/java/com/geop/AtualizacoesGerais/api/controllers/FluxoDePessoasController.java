@@ -1,10 +1,9 @@
 package com.geop.AtualizacoesGerais.api.controllers;
 
-import com.geop.AtualizacoesGerais.api.dtos.FluxoDePessoasRequest;
-import com.geop.AtualizacoesGerais.api.dtos.FluxoDePessoasResponse;
-import com.geop.AtualizacoesGerais.api.services.FluxoDePessoasService;
+import com.geop.AtualizacoesGerais.api.dtos.fluxoDePessoasDto.FluxoDePessoasRequest;
+import com.geop.AtualizacoesGerais.api.dtos.fluxoDePessoasDto.FluxoDePessoasResponse;
+import com.geop.AtualizacoesGerais.api.services.fluxoDePessoasService.FluxoDePessoasService;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
