@@ -1,4 +1,4 @@
-package com.geop.AtualizacoesGerais.api.dtos;
+package com.geop.AtualizacoesGerais.api.dtos.fluxoDePessoasDto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;

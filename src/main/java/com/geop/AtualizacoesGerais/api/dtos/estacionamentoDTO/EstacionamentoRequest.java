@@ -1,9 +1,7 @@
-package com.geop.AtualizacoesGerais.api.dtos;
+package com.geop.AtualizacoesGerais.api.dtos.estacionamentoDTO;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.geop.AtualizacoesGerais.domain.entities.Estacionamento;
 import jakarta.validation.constraints.NotNull;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
@@ -36,7 +34,9 @@ public record EstacionamentoRequest(
         LocalDateTime dataHoraEvento,
         Double percentualUsoPorVaga,
         Integer tempoMedioOcupacao,
-        Integer horarioDePicoMedia
+        Integer horarioDePicoMedia,
+        LocalDateTime dataUltimaAtualizacao,
+        String usuarioResponsavel
 ) {
     public static Estacionamento toEntidade(EstacionamentoRequest estacionamentoRequest){
         if (estacionamentoRequest==null){
@@ -68,7 +68,9 @@ public record EstacionamentoRequest(
                 estacionamentoRequest.dataHoraEvento(),
                 estacionamentoRequest.percentualUsoPorVaga(),
                 estacionamentoRequest.tempoMedioOcupacao(),
-                estacionamentoRequest.horarioDePicoMedia()
+                estacionamentoRequest.horarioDePicoMedia(),
+                estacionamentoRequest.dataUltimaAtualizacao(),
+                estacionamentoRequest.usuarioResponsavel()
         );
     }
 }

@@ -1,7 +1,7 @@
-package com.geop.AtualizacoesGerais.api.services;
+package com.geop.AtualizacoesGerais.api.services.fluxoDePessoasService;
 
-import com.geop.AtualizacoesGerais.api.dtos.FluxoDePessoasRequest;
-import com.geop.AtualizacoesGerais.api.dtos.FluxoDePessoasResponse;
+import com.geop.AtualizacoesGerais.api.dtos.fluxoDePessoasDto.FluxoDePessoasRequest;
+import com.geop.AtualizacoesGerais.api.dtos.fluxoDePessoasDto.FluxoDePessoasResponse;
 import com.geop.AtualizacoesGerais.domain.entities.FluxoDePessoas;
 import com.geop.AtualizacoesGerais.domain.exceptions.ModelNotFoundException;
 import com.geop.AtualizacoesGerais.domain.repositories.FluxoDePessoasRepository;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import static com.geop.AtualizacoesGerais.api.dtos.FluxoDePessoasRequest.toEntidade;
+import static com.geop.AtualizacoesGerais.api.dtos.fluxoDePessoasDto.FluxoDePessoasRequest.toEntidade;
 
 @Service
 @Log4j2

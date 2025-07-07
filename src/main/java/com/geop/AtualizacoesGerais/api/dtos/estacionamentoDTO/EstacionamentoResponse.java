@@ -1,4 +1,4 @@
-package com.geop.AtualizacoesGerais.api.dtos;
+package com.geop.AtualizacoesGerais.api.dtos.estacionamentoDTO;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -48,10 +48,12 @@ public record EstacionamentoResponse(
         LocalDateTime dataHoraEvento,
         Double percentualUsoPorVaga,
         Integer tempoMedioOcupacao,
-        Integer horarioDePicoMedia
+        Integer horarioDePicoMedia,
+        LocalDateTime dataUltimaAtualizacao,
+        String usuarioResponsavel
 ) {
     public static EstacionamentoResponse toResponse(Estacionamento estacionamento) {
-        if (estacionamento == null) return null;
+        if (estacionamento == null) {return null;}
 
         return new EstacionamentoResponse(
                 estacionamento.getIdVaga(),
@@ -79,7 +81,9 @@ public record EstacionamentoResponse(
                 estacionamento.getDataHoraEvento(),
                 estacionamento.getPercentualUsoPorVaga(),
                 estacionamento.getTempoMedioOcupacao(),
-                estacionamento.getHorarioDePicoMedia()
+                estacionamento.getHorarioDePicoMedia(),
+                estacionamento.getDataUltimaAtualizacao(),
+                estacionamento.getUsuarioResponsavel()
         );
     }
 }

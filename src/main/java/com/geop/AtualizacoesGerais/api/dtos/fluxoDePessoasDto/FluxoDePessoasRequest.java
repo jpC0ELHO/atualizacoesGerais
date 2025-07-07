@@ -1,4 +1,4 @@
-package com.geop.AtualizacoesGerais.api.dtos;
+package com.geop.AtualizacoesGerais.api.dtos.fluxoDePessoasDto;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
