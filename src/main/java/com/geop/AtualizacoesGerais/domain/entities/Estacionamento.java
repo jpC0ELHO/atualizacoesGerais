@@ -79,4 +79,8 @@ public class Estacionamento extends Entidade{
     private Integer tempoMedioOcupacao; // minutos
     @Column(name = "horario_de_pico_media")
     private Integer horarioDePicoMedia; //horas
+    @Column(name = "data_ultima_atualizacao")
+    private LocalDateTime dataUltimaAtualizacao;
+    @Column(name = "usuario_responsavel")
+    private String usuarioResponsavel;
 }
