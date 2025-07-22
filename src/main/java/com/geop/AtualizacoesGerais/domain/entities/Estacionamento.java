@@ -16,39 +16,32 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 @AllArgsConstructor
-@Table(name = "fuxo_de_pessoas")
+@Table(name = "estacionamento")
 @EntityListeners(AuditingEntityListener.class)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class Estacionamento extends Entidade{
-
     @Column(nullable = false, unique = true)
     private String idVaga;
-
     @Column(nullable = false)
     private String localizacao;
-
     @Column(nullable = false)
     private String tipoVaga;
-
+    @Column(nullable = false)
     private String sensorId;
+    @Column(nullable = false)
     private String cameraId;
+    @Column(nullable = false)
     private String placaVeiculo;
-
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private EstacionamentoDiaDados dadosDiarios;
-
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private EstacionamentoSemanaDados dadosSemanais;
-
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private EstacionamentoMesDados dadosMensais;
-
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private EstacionamentoAnoDados dadosAnuais;
-
     @Column(name = "data_ultima_atualizacao")
     private LocalDateTime dataUltimaAtualizacao;
-
     @Column(name = "usuario_responsavel")
     private String usuarioResponsavel;
 
